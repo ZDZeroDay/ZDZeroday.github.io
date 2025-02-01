@@ -15,7 +15,7 @@
             padding: 0;
             overflow: hidden;
         }
-        
+
         .overlay {
             position: absolute;
             top: 0;
@@ -77,6 +77,25 @@
             box-shadow: 0 0 25px rgba(255, 100, 0, 1);
         }
 
+        .guns-container {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+        }
+
+        .gun {
+            width: 150px;
+            transform: rotate(-10deg);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .gun:hover {
+            transform: rotate(0deg) scale(1.1);
+        }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -100,14 +119,14 @@
             }
         }
 
-        .guns {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            max-width: 1000px;
-            opacity: 0.2;
+        @media (max-width: 768px) {
+            .guns-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .gun {
+                width: 120px;
+            }
         }
     </style>
 </head>
@@ -115,9 +134,14 @@
 
     <div class="overlay">
         <div class="container">
-<h1>乙DゝSTAR</h1>
-<p>بیلاخ</p>
-            <a href="https://t.me/+RQEApKEtZE8wNmFk" class="btn">ورود به کانال تلگرام</a>
+            <h1>بهترین کانال کالاف دیوتی موبایل</h1>
+            <p>🔥 جدیدترین اخبار، سلاح‌های افسانه‌ای، تکنیک‌های حرفه‌ای و رقابت‌های آنلاین Call of Duty Mobile را اینجا پیدا کنید! 🔥</p>
+            <a href="https://t.me/YOUR_CHANNEL_LINK" class="btn">ورود به کانال تلگرام</a>
+        </div>
+        <div class="guns-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/AK-47_type_II_Part_DM-ST-89-01131.jpg" class="gun" alt="AK-47">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/PSM_pistol.jpg" class="gun" alt="Pistol">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/M4_Carbine_RIA_2016.jpg" class="gun" alt="M4">
         </div>
     </div>
 
