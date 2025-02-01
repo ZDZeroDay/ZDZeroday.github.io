@@ -1,149 +1,163 @@
-<!DOCTYPE html>
-<html lang="fa">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>کانال تلگرام کالاف دیوتی موبایل</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
+‏<!DOCTYPE html>
+‏<html lang="fa">
+‏<head>
+‏    <meta charset="UTF-8">
+‏    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+‏    <title>کانال تلگرام کالاف دیوتی موبایل</title>
+‏    <style>
+‏        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
 
-        body {
-            font-family: 'Oswald', sans-serif;
-            background: url('https://wallpapercave.com/wp/wp8641346.jpg') no-repeat center center/cover;
-            color: white;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
+‏        body {
+‏            font-family: 'Oswald', sans-serif;
+‏            background: url('https://wallpapercave.com/wp/wp8641346.jpg') no-repeat center center/cover;
+‏            color: white;
+‏            margin: 0;
+‏            padding: 0;
+‏            display: flex;
+‏            justify-content: center;
+‏            align-items: center;
+‏            height: 100vh;
+‏            text-align: center;
         }
 
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+‏        .container {
+‏            width: 90%;
+‏            max-width: 800px;
+‏            padding: 30px;
+‏            background: rgba(255, 215, 0, 0.1);
+‏            border: 2px solid #ffd700;
+‏            border-radius: 20px;
+‏            box-shadow: 0 0 20px #ffd700;
+‏            backdrop-filter: blur(5px);
+‏            animation: fadeIn 1.5s ease-in-out;
         }
 
-        .container {
-            width: 90%;
-            max-width: 800px;
-            padding: 30px;
-            background: rgba(255, 215, 0, 0.1);
-            border: 2px solid #ffd700;
-            border-radius: 20px;
-            box-shadow: 0 0 20px #ffd700;
-            backdrop-filter: blur(5px);
-            animation: fadeIn 1.5s ease-in-out;
+‏        h1 {
+‏            font-size: 40px;
+‏            margin-bottom: 10px;
+‏            text-transform: uppercase;
+‏            letter-spacing: 3px;
+‏            color: #ffcc00;
+‏            text-shadow: 0 0 10px #ffcc00;
         }
 
-        h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: #ffcc00;
-            text-shadow: 0 0 10px #ffcc00;
+‏        p {
+‏            font-size: 18px;
+‏            margin-bottom: 20px;
+‏            color: #fff;
+‏            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
         }
 
-        p {
-            font-size: 18px;
-            margin-bottom: 20px;
-            color: #fff;
-            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+‏        .btn {
+‏            display: inline-block;
+‏            padding: 15px 30px;
+‏            font-size: 20px;
+‏            font-weight: bold;
+‏            text-transform: uppercase;
+‏            background: linear-gradient(45deg, #ff0000, #ff6600);
+‏            color: white;
+‏            text-decoration: none;
+‏            border-radius: 50px;
+‏            box-shadow: 0 0 15px rgba(255, 100, 0, 0.8);
+‏            transition: 0.3s;
+‏            animation: pulse 2s infinite;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 20px;
-            font-weight: bold;
-            text-transform: uppercase;
-            background: linear-gradient(45deg, #ff0000, #ff6600);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            box-shadow: 0 0 15px rgba(255, 100, 0, 0.8);
-            transition: 0.3s;
-            animation: pulse 2s infinite;
+‏        .btn:hover {
+‏            background: linear-gradient(45deg, #ff6600, #ff0000);
+‏            box-shadow: 0 0 25px rgba(255, 100, 0, 1);
         }
 
-        .btn:hover {
-            background: linear-gradient(45deg, #ff6600, #ff0000);
-            box-shadow: 0 0 25px rgba(255, 100, 0, 1);
+‏        .guns-container {
+‏            display: flex;
+‏            justify-content: center;
+‏            gap: 20px;
+‏            flex-wrap: wrap;
         }
 
-        .guns-container {
-            position: absolute;
-            bottom: 10%;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 20px;
+‏        .gun-box {
+‏            width: 200px;
+‏            height: 120px;
+‏            background: rgba(0, 0, 0, 0.5);
+‏            border: 2px solid #ffd700;
+‏            border-radius: 10px;
+‏            display: flex;
+‏            align-items: center;
+‏            justify-content: center;
+‏            box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+‏            transition: transform 0.3s ease-in-out;
         }
 
-        .gun {
-            width: 150px;
-            transform: rotate(-10deg);
-            transition: transform 0.5s ease-in-out;
+‏        .gun-box:hover {
+‏            transform: scale(1.1);
+‏            box-shadow: 0 0 25px rgba(255, 215, 0, 1);
         }
 
-        .gun:hover {
-            transform: rotate(0deg) scale(1.1);
+‏        .gun {
+‏            width: auto;
+‏            height: 100px;
+‏            object-fit: contain;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
+‏        @keyframes fadeIn {
+‏            from {
+‏                opacity: 0;
+‏                transform: scale(0.9);
             }
-            to {
-                opacity: 1;
-                transform: scale(1);
+‏            to {
+‏                opacity: 1;
+‏                transform: scale(1);
             }
         }
 
-        @keyframes pulse {
+‏        @keyframes pulse {
             0% {
-                transform: scale(1);
+‏                transform: scale(1);
             }
             50% {
-                transform: scale(1.05);
+‏                transform: scale(1.05);
             }
             100% {
-                transform: scale(1);
+‏                transform: scale(1);
             }
         }
 
-        @media (max-width: 768px) {
-            .guns-container {
-                flex-direction: column;
-                align-items: center;
+‏        @media (max-width: 768px) {
+‏            .guns-container {
+‏                flex-direction: column;
+‏                align-items: center;
             }
-            .gun {
-                width: 120px;
+‏            .gun-box {
+‏                width: 160px;
+‏                height: 100px;
+            }
+‏            .gun {
+‏                height: 80px;
             }
         }
-    </style>
-</head>
-<body>
+‏    </style>
+‏</head>
+‏<body>
 
-    <div class="overlay">
-        <div class="container">
-            <h1>بهترین کانال کالاف دیوتی موبایل</h1>
-            <p>🔥 جدیدترین اخبار، سلاح‌های افسانه‌ای، تکنیک‌های حرفه‌ای و رقابت‌های آنلاین Call of Duty Mobile را اینجا پیدا کنید! 🔥</p>
-            <a href="https://t.me/YOUR_CHANNEL_LINK" class="btn">ورود به کانال تلگرام</a>
-        </div>
-        <div class="guns-container">
-            <img src="https://yakhchalgem.com/wp-content/uploads/2024/08/AK-47-Radiance-draw-call-of-duty-mobile-cod01-min.webp" class="gun" alt="AK-47">
-            <img src="https://yakhchalgem.com/wp-content/uploads/2024/08/AK-47-Radiance-draw-call-of-duty-mobile-cod01-min.webp" class="gun" alt="Pistol">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/M4_Carbine_RIA_2016.jpg" class="gun" alt="M4">
-        </div>
-    </div>
+‏    <div class="container">
+‏        <h1>بهترین کانال کالاف دیوتی موبایل</h1>
+‏        <p>به جمع حرفه‌ای‌های Call of Duty Mobile بپیوندید و آخرین اخبار، آپدیت‌ها و ترفندهای بازی را دریافت کنید!</p>
+        
+‏        <div class="guns-container">
+‏            <div class="gun-box">
+‏                <img src="https://www.pngmart.com/files/22/AK-47-PNG-Transparent.png" alt="AK-47" class="gun">
+‏            </div>
+‏            <div class="gun-box">
+‏                <img src="https://www.pngmart.com/files/22/M4A1-Carbine-PNG-HD.png" alt="M4" class="gun">
+‏            </div>
+‏            <div class="gun-box">
+‏                <img src="https://www.pngmart.com/files/22/Sniper-Rifle-PNG-Transparent.png" alt="Sniper" class="gun">
+‏            </div>
+‏        </div>
 
-</body>
-</html>
+‏        <br>
+‏        <a href="https://t.me/YourChannelLink" class="btn">ورود به کانال تلگرام</a>
+‏    </div>
+
+‏</body>
+‏</html>
