@@ -9,7 +9,7 @@
 
         body {
             font-family: 'Oswald', sans-serif;
-            background: url('https://wallpaperset.com/w/full/6/1/8/170510.jpg') no-repeat center center/cover;
+            background: url('https://wallpapercave.com/wp/wp8641346.jpg') no-repeat center center/cover;
             color: white;
             margin: 0;
             padding: 0;
@@ -70,9 +70,18 @@
         .guns-container {
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 30px;
             flex-wrap: wrap;
             margin-top: 20px;
+        }
+
+        .profile {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #ffcc00;
+            box-shadow: 0 0 15px rgba(255, 204, 0, 0.8);
         }
 
         .gun {
@@ -86,6 +95,29 @@
         .gun:hover {
             transform: scale(1.2);
             filter: drop-shadow(0 0 20px rgba(255, 255, 0, 1));
+        }
+
+        .member-box {
+            text-align: center;
+        }
+
+        .owner-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff5733;
+            text-shadow: 0 0 10px #ff5733;
+        }
+
+        .vice-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #33ff57;
+            text-shadow: 0 0 10px #33ff57;
+        }
+
+        .telegram-id {
+            font-size: 14px;
+            color: #aaa;
         }
 
         @keyframes fadeIn {
@@ -119,19 +151,35 @@
             .gun {
                 height: 80px;
             }
+            .profile {
+                width: 100px;
+                height: 100px;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>乙Dゝ Zero Day</h1>
-        <p>  "در صلح و آرامش باشید" </p>
+        <h1>کانال تلگرام کالاف دیوتی موبایل</h1>
+        <p>جدیدترین اخبار، آپدیت‌ها و ترفندهای بازی را در کانال ما دنبال کنید!</p>
         
         <div class="guns-container">
-            <img src="https://www.pngmart.com/files/22/AK-47-PNG-Transparent.png" alt="AK-47" class="gun">
-            <img src="https://www.pngmart.com/files/22/M4A1-Carbine-PNG-HD.png" alt="M4" class="gun">
-            <img src="https://www.pngmart.com/files/22/Sniper-Rifle-PNG-Transparent.png" alt="Sniper" class="gun">
+            <div class="member-box">
+                <img src="https://www.pngmart.com/files/22/AK-47-PNG-Transparent.png" alt="AK-47" class="gun">
+                <div class="owner-title">Owner</div>
+                <div class="telegram-id">@Owner_Telegram</div>
+            </div>
+
+            <div>
+                <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Group Profile" class="profile">
+            </div>
+
+            <div class="member-box">
+                <img src="https://www.pngmart.com/files/22/Sniper-Rifle-PNG-Transparent.png" alt="Sniper" class="gun">
+                <div class="vice-title">Vice Master</div>
+                <div class="telegram-id">@Vice_Telegram</div>
+            </div>
         </div>
 
         <br>
